@@ -1,63 +1,106 @@
-nav{
-   padding: 10px 2%;
-   justify-content: space-between;
-   box-shadow: 0 0 10px rgba(0,0,0,0,2); 
-   background: #fff;
-   position: sticky;
-   top: 0;
-   z-index: 10;
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  justify-content: space-between;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-left .menu-icon{
-    width: 22px ;
-    margin-right: 25px;
-}
-.nav-left .logo{
-  width: 130px;
-
-}
-.nav-middle .search-box{
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    margin-right: 15px;
-    border-radius: 25px;
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
 }
 
-.nav-middle .search-box input{
-  width: 400px;
-  border: 0;
-  outline: 0;
+.nav-left .menu-icon {
+  width: 22px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav-left .logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* MIDDLE */
+.nav-middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-middle .search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 999px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.nav-middle .search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
   background: transparent;
+  font-size: 14px;
 }
 
-.nav-middle .search-box img{
-    width: 15px;
-}
-.nav-right img{
-    width: 25px;
-    margin-right: 25px;
-
+.nav-middle .search-box img {
+  width: 16px;
+  cursor: pointer;
 }
 
-.nav-right .user-icon{
-    width: 35px;
-    border-radius: 50%;
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
 }
-@media (max-width:900px){
-    .menu-icon{
-        display: none;
-    }
-    .nav-right img{
-        display: none;
-    }
-    .nav-right .user-icon{
-        display: block;
-        width: 30px;
-    }
-    .logo{
-        width: 90px;
-    }
-    .nav-middle .search-box input{
-        width: 100px;
-    }
+
+.nav-right img {
+  width: 22px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav-right .user-icon {
+  width: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 📱 Tablet */
+@media (max-width: 900px) {
+  .nav-left .menu-icon {
+    display: none;
+  }
+
+  .nav-right img:not(.user-icon) {
+    display: none;
+  }
+
+  .nav-middle .search-box {
+    max-width: 300px;
+  }
+
+  .nav-left .logo {
+    width: 90px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .nav-middle {
+    display: none;
+  }
+
+  nav {
+    padding: 10px 12px;
+  }
 }
