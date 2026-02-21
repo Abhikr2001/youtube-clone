@@ -1,143 +1,226 @@
+/* =========================
+   MAIN VIDEO SECTION
+========================= */
 .play-video {
-  flex-basis: 68%;
-  max-width: 100%;
+  flex-basis: 69%;
+  padding: 10px 20px;
 }
 
-/* 🎥 VIDEO */
+/* Professional 16:9 Video */
 .play-video iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
+  border: none;
 }
 
-/* 🎬 TITLE */
+/* =========================
+   VIDEO TITLE
+========================= */
 .play-video h3 {
-  margin-top: 12px;
+  margin-top: 16px;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.4;
+  color: #0f0f0f;
 }
 
-/* ℹ️ VIDEO INFO */
+/* =========================
+   VIDEO INFO SECTION
+========================= */
 .play-video-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 12px;
   margin-top: 10px;
   font-size: 14px;
-  color: #5a5a5a;
+  color: #606060;
 }
 
 .play-video-info img {
   width: 20px;
   margin-right: 6px;
+  opacity: 0.7;
 }
 
 .play-video-info span {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
-/* 📺 CHANNEL */
+.play-video-info span:hover {
+  opacity: 0.8;
+}
+
+/* Divider */
+.play-video hr {
+  border: 0;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 15px 0;
+}
+
+/* =========================
+   CHANNEL / PUBLISHER
+========================= */
 .publisher {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .publisher img {
   width: 42px;
+  height: 42px;
   border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
 }
 
 .publisher div {
   flex: 1;
+  line-height: 18px;
 }
 
 .publisher div p {
-  color: #000;
+  color: #0f0f0f;
   font-weight: 600;
   font-size: 16px;
 }
 
 .publisher div span {
   font-size: 13px;
-  color: #5a5a5a;
+  color: #606060;
 }
 
+/* Subscribe Button */
 .publisher button {
   background: #cc0000;
   color: #fff;
-  padding: 8px 18px;
-  border-radius: 20px;
+  padding: 10px 22px;
   border: none;
-  cursor: pointer;
+  border-radius: 20px;
+  font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
-/* 📝 DESCRIPTION */
+.publisher button:hover {
+  background: #b80000;
+}
+
+.publisher button:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
 .vid-description {
-  margin: 15px 0;
-  color: #5a5a5a;
+  margin-top: 15px;
+  padding: 15px;
+  background: #f2f2f2;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0f0f0f;
+}
+
+.vid-description p {
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .vid-description h4 {
-  font-size: 14px;
-  margin-top: 20px;
+  font-size: 15px;
+  margin-top: 15px;
+  color: #0f0f0f;
 }
 
-/* 💬 COMMENTS */
+/* =========================
+   COMMENTS
+========================= */
 .comment {
   display: flex;
-  gap: 12px;
-  margin: 18px 0;
+  align-items: flex-start;
+  margin: 20px 0;
 }
 
 .comment img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  margin-right: 14px;
+  object-fit: cover;
 }
 
 .comment h3 {
   font-size: 14px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
+  color: #0f0f0f;
 }
 
 .comment h3 span {
   font-size: 12px;
-  color: #777;
-  margin-left: 6px;
+  color: #606060;
+  font-weight: 400;
+  margin-left: 8px;
 }
 
+.comment p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0f0f0f;
+}
+
+/* Comment Actions */
 .comment-action {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 6px;
+  margin-top: 8px;
   font-size: 13px;
+  color: #606060;
 }
 
 .comment-action img {
   width: 18px;
+  margin-right: 5px;
+  cursor: pointer;
+  opacity: 0.7;
 }
 
-/* 📱 MOBILE FIXES */
+.comment-action img:hover {
+  opacity: 1;
+}
+
+.comment-action span {
+  margin-right: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .play-video {
     flex-basis: 100%;
+    padding: 10px;
   }
 
-  .play-video h3 {
-    font-size: 18px;
+  .play-video iframe {
+    width: 100%;
   }
 
   .play-video-info {
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .play-video-info span {
+    margin: 8px 15px 0 0;
   }
 
   .publisher {
