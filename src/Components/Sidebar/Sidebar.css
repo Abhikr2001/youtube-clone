@@ -1,68 +1,99 @@
-.sidebar{
-    background: #fff;
-    width:15%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    padding-left: 2%;
-    padding-top: 80px;
-
-}
-.shortcut-links img{
-    width: 20px;
-    margin-right: 20px;
+.sidebar {
+  background: #fff;
+  width: 240px;               /* fixed width like YouTube */
+  height: calc(100vh - 60px); /* below navbar */
+  position: fixed;
+  top: 60px;
+  left: 0;
+  padding: 20px 10px;
+  overflow-y: auto;
 }
 
-.side-link{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: fit-content;
-    flex-wrap: wrap;
-    cursor: pointer;
+/* Scrollbar (optional but classy) */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }
 
-.sidebar hr{
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    width: 85%;
+/* LINKS */
+.side-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.subscribed-list h3{
-    font-size: 13px;
-    margin: 20px 0;
-    color: #5a5a5a;
+.side-link:hover {
+  background: #f2f2f2;
 }
 
-.subscribed-list img{
-    width: 25px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-.small-sidebar{
-    width: 5%;
-
+.side-link img {
+  width: 20px;
+  margin-right: 20px;
 }
 
-.small-sidebar p{
+.side-link p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ACTIVE LINK */
+.side-link.active {
+  background: #f2f2f2;
+}
+
+.side-link.active img {
+  border-bottom: none;
+}
+
+/* DIVIDER */
+.sidebar hr {
+  border: 0;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 12px 0;
+}
+
+/* SUBSCRIPTIONS */
+.subscribed-list h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 15px 12px;
+  color: #606060;
+}
+
+.subscribed-list .side-link img {
+  width: 26px;
+  border-radius: 50%;
+}
+
+/* COLLAPSED SIDEBAR */
+.small-sidebar {
+  width: 72px;
+}
+
+.small-sidebar p,
+.small-sidebar h3 {
+  display: none;
+}
+
+.small-sidebar .side-link {
+  justify-content: center;
+}
+
+.small-sidebar img {
+  margin-right: 0;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .sidebar {
     display: none;
-}
-.small-sidebar h3{
-    display:none;
-}
-.small-sidebar hr{
-    width:50%;
-    margin-bottom: 25px;
-
-}
-.side-link.active img{
-    padding-bottom: 2px;
-    border-bottom: 3px solid red;
-}
-
-@media (max-width:900px){
-    .sidebar{
-        display: none;
-    }
+  }
 }
