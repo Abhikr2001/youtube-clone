@@ -93,12 +93,3 @@ nav {
 }
 
 /* 📱 Mobile */
-@media (max-width: 600px) {
-  .nav-middle {
-    display: none;
-  }
-
-  nav {
-    padding: 10px 12px;
-  }
-}
