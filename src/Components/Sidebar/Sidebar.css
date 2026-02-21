@@ -1,42 +1,61 @@
+/* SIDEBAR CONTAINER */
 .sidebar {
-  background: #fff;
+  background: #ffffff;
   width: 240px;
   height: calc(100vh - 60px);
   position: fixed;
   top: 60px;
   left: 0;
-  padding: 20px 10px;
+  padding: 12px 8px;
   overflow-y: auto;
   transition: all 0.3s ease;
   z-index: 100;
+}
+
+/* SCROLLBAR (Optional - Clean Look) */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #d3d3d3;
+  border-radius: 10px;
 }
 
 /* LINKS */
 .side-link {
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: 10px 12px;
   border-radius: 10px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .side-link img {
   width: 24px;
   height: 24px;
-  margin-right: 16px;
-  border-radius: 50%;
+  margin-right: 18px;
 }
 
 .side-link p {
   font-size: 14px;
   font-weight: 500;
+  color: #0f0f0f;
 }
 
-.side-link.active,
+/* Hover & Active */
 .side-link:hover {
   background: #f2f2f2;
+}
+
+.side-link.active {
+  background: #e5e5e5;
+  font-weight: 600;
+}
+
+.side-link:active {
+  transform: scale(0.98);
 }
 
 /* COLLAPSED DESKTOP */
@@ -59,27 +78,34 @@
 
 /* SUBSCRIBED SECTION */
 .subscribed-list {
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e5e5;
 }
 
+/* Professional Heading (YouTube style) */
 .subscribed-list h3 {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
-  color: #555;
-  margin-bottom: 12px;
+  color: #606060;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 8px 12px 10px 12px;
 }
 
+/* Subscribed Links */
 .subscribed-list .side-link {
-  padding: 6px 10px;
-  margin-bottom: 8px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
 }
 
+/* Rounded (NOT Circular) Channel Images */
 .subscribed-list .side-link img {
   width: 32px;
   height: 32px;
-  margin-right: 12px;
+  margin-right: 14px;
+  border-radius: 8px;   /* 🔥 Rounded corners */
+  object-fit: cover;
 }
 
 /* MOBILE */
@@ -106,6 +132,6 @@
 .sidebar-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 99;
 }
