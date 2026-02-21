@@ -11,8 +11,8 @@ import { Link } from 'react-router-dom'
 
 const Navbar = ({ setSidebar }) => {
   return (
-    <nav className="flex-div">
-      <div className="nav-left flex-div">
+    <nav>
+      <div className="nav-left">
         <img
           className="menu-icon"
           src={menu_icon}
@@ -24,14 +24,14 @@ const Navbar = ({ setSidebar }) => {
         </Link>
       </div>
 
-      <div className="nav-middle flex-div">
-        <div className="search-box flex-div">
-          <input type="text" placeholder="search" />
+      <div className="nav-middle">
+        <div className="search-box">
+          <input type="text" placeholder="Search" />
           <img src={search_icon} alt="" />
         </div>
       </div>
 
-      <div className="nav-right flex-div">
+      <div className="nav-right">
         <img src={upload_icon} alt="" />
         <img src={more_icon} alt="" />
         <img src={notification_icon} alt="" />
