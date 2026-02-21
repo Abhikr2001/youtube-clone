@@ -7,7 +7,7 @@ const Home = ({ sidebar, setSidebar }) => {
   const [category, setCategory] = useState(0)
 
   return (
-    <>
+    <div className="home">
       <Sidebar
         sidebar={sidebar}
         setSidebar={setSidebar}
@@ -15,10 +15,10 @@ const Home = ({ sidebar, setSidebar }) => {
         setCategory={setCategory}
       />
 
-      <div className={`container ${sidebar ? "" : "large-container"}`}>
+      <div className="container">
         <Feed category={category} />
       </div>
-    </>
+    </div>
   )
 }
 
