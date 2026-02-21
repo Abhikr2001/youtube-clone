@@ -6,14 +6,20 @@ import Video from './Pages/Video/Video'
 import Footer from './Components/Footer/Footer'
 
 const App = () => {
-  const [sidebar,setSidebar]=useState(true);
+  const [sidebar, setSidebar] = useState(true)
+
   return (
     <div>
       <Navbar setSidebar={setSidebar} />
+
       <Routes>
-        <Route path='/' element={<Home sidebar={sidebar}/>} />
-        <Route path='/Video/:categoryId/:videoId' element={<Video />} />
+        <Route
+          path="/"
+          element={<Home sidebar={sidebar} setSidebar={setSidebar} />}
+        />
+        <Route path="/Video/:categoryId/:videoId" element={<Video />} />
       </Routes>
+
       <Footer />
     </div>
   )
