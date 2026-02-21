@@ -19,11 +19,14 @@
   border-radius: 10px;
   margin-bottom: 6px;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 .side-link img {
-  width: 20px;
-  margin-right: 20px;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  border-radius: 50%;
 }
 
 .side-link p {
@@ -52,6 +55,31 @@
 
 .small-sidebar img {
   margin-right: 0;
+}
+
+/* SUBSCRIBED SECTION */
+.subscribed-list {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.subscribed-list h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.subscribed-list .side-link {
+  padding: 6px 10px;
+  margin-bottom: 8px;
+}
+
+.subscribed-list .side-link img {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
 }
 
 /* MOBILE */
