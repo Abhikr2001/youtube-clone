@@ -6,7 +6,7 @@ nav {
   background: #fff;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 200; /* above sidebar */
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -77,9 +77,7 @@ nav {
 
 /* 📱 Tablet */
 @media (max-width: 900px) {
-  .nav-left .menu-icon {
-    display: none;
-  }
+  /* ✅ menu icon stays visible */
 
   .nav-right img:not(.user-icon) {
     display: none;
