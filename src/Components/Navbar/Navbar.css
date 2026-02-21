@@ -47,6 +47,7 @@ nav {
 .search-box input {
   flex: 1;
   border: none;
+  display: block;
   outline: none;
   background: transparent;
   font-size: 14px;
@@ -109,13 +110,12 @@ nav {
   }
 
   .search-box {
-    border: none;
-    padding: 0;
-    max-width: unset;
+    max-width: 160px;
+    padding: 4px 10px;
   }
 
   .search-box input {
-    display: none;
+    font-size: 13px;
   }
 
   .search-box img {
