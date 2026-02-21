@@ -231,3 +231,20 @@
     margin-top: 10px;
   }
 }
+
+/* Show More / Show Less */
+.toggle-comments {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #065fd4;
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  padding: 6px 0;
+  transition: opacity 0.2s ease;
+}
+
+.toggle-comments:hover {
+  opacity: 0.8;
+}
