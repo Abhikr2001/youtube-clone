@@ -10,7 +10,7 @@ const Home = ({ sidebar, setSidebar }) => {
     <>
       <Sidebar
         sidebar={sidebar}
-        setSidebar={setSidebar}   {/* ✅ ADD THIS */}
+        setSidebar={setSidebar}
         category={category}
         setCategory={setCategory}
       />
