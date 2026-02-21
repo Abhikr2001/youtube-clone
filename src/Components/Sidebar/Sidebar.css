@@ -1,15 +1,21 @@
+/* =========================
+   DESKTOP SIDEBAR (DEFAULT)
+   ========================= */
+
 .sidebar {
   background: #fff;
-  width: 240px;               /* fixed width like YouTube */
+  width: 240px;
   height: calc(100vh - 60px); /* below navbar */
   position: fixed;
   top: 60px;
   left: 0;
   padding: 20px 10px;
   overflow-y: auto;
+  transition: all 0.3s ease;
+  z-index: 100;
 }
 
-/* Scrollbar (optional but classy) */
+/* Scrollbar */
 .sidebar::-webkit-scrollbar {
   width: 6px;
 }
@@ -48,10 +54,6 @@
   background: #f2f2f2;
 }
 
-.side-link.active img {
-  border-bottom: none;
-}
-
 /* DIVIDER */
 .sidebar hr {
   border: 0;
@@ -73,7 +75,10 @@
   border-radius: 50%;
 }
 
-/* COLLAPSED SIDEBAR */
+/* =========================
+   COLLAPSED SIDEBAR (DESKTOP)
+   ========================= */
+
 .small-sidebar {
   width: 72px;
 }
@@ -91,29 +96,39 @@
   margin-right: 0;
 }
 
-/* MOBILE */
-/*@media (max-width: 900px) {
+/* =========================
+   MOBILE SIDEBAR (SLIDE IN)
+   ========================= */
+
+@media (max-width: 900px) {
   .sidebar {
-    display: none;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 75%;
+    max-width: 280px;
+    padding-top: 70px; /* space for navbar */
+    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   }
-}*/
-@media (max-width:900px){
-    .sidebar{
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 70%;
-        height: 100vh;
-        background: #fff;
-        z-index: 100;
-        transition: left 0.3s ease;
-    }
 
-    .sidebar.show{
-        left: 0;
-    }
+  /* when sidebar is open */
+  .sidebar.open {
+    left: 0;
+  }
 
-    .small-sidebar{
-        left: -100%;
-    }
+  /* disable desktop collapse logic on mobile */
+  .small-sidebar {
+    width: 75%;
+  }
+}
+
+/* =========================
+   MOBILE OVERLAY
+   ========================= */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 99;
 }
