@@ -9,8 +9,9 @@ const App = () => {
   const [sidebar, setSidebar] = useState(true)
 
   return (
-    <div>
+    <>
       <Navbar setSidebar={setSidebar} />
+
       <Routes>
         <Route
           path="/"
@@ -18,8 +19,9 @@ const App = () => {
         />
         <Route path="/Video/:categoryId/:videoId" element={<Video />} />
       </Routes>
+
       <Footer />
-    </div>
+    </>
   )
 }
 
