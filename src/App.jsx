@@ -6,7 +6,7 @@ import Video from './Pages/Video/Video'
 import Footer from './Components/Footer/Footer'
 
 const App = () => {
-  const [sidebar, setSidebar] = useState(true)
+  const [sidebar, setSidebar] = useState(false)
 
   return (
     <>
